@@ -71,16 +71,16 @@ $APPLICATION->SetTitle("");
 			<h2 class="text-uppercase"><span class="d-block">Discover</span> The Collections</h2>
 		</div>
 		 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"main_page",
-	Array(
+	"bitrix:catalog.section.list", 
+	"main_page", 
+	array(
 		"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "popular_products",
+		"COMPONENT_TEMPLATE" => "main_page",
 		"COUNT_ELEMENTS" => "Y",
 		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
 		"FILTER_NAME" => "sectionsFilter",
@@ -89,14 +89,24 @@ $APPLICATION->SetTitle("");
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "catalog",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"NAME",1=>"SORT",2=>"DESCRIPTION",3=>"PICTURE",4=>"",),
+		"SECTION_FIELDS" => array(
+			0 => "NAME",
+			1 => "SORT",
+			2 => "DESCRIPTION",
+			3 => "PICTURE",
+			4 => "",
+		),
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-		"SECTION_URL" => "#SITE_DIR#/shop/#IBLOCK_EXTERNAL_ID#",
-		"SECTION_USER_FIELDS" => array(0=>"UF_SHOW_ON_MAIN",1=>"",),
+		"SECTION_URL" => "#SITE_DIR#/shop/?SECTION_ID=#SECTION_ID#",
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_SHOW_ON_MAIN",
+			1 => "",
+		),
 		"SHOW_PARENT_NAME" => "Y",
 		"TOP_DEPTH" => "2",
 		"VIEW_MODE" => "TILE"
-	)
+	),
+	false
 );?>
 	</div>
 </div>
@@ -135,7 +145,7 @@ $APPLICATION->SetTitle("");
 		"CONVERT_CURRENCY" => "Y",
 		"CURRENCY_ID" => "USD",
 		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
-		"DETAIL_URL" => "#SITE_DIR#/shop/",
+		"DETAIL_URL" => "#SITE_DIR#/shop/?SECTION_ID=#SECTION_ID#&ELEMENT_ID=#ELEMENT_ID#",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_COMPARE" => "N",
@@ -187,7 +197,7 @@ $APPLICATION->SetTitle("");
 		"SECTION_CODE" => "",
 		"SECTION_ID" => $_REQUEST["SECTION_ID"],
 		"SECTION_ID_VARIABLE" => "SECTION_ID",
-		"SECTION_URL" => "#SITE_DIR#/shop/",
+		"SECTION_URL" => "",
 		"SECTION_USER_FIELDS" => array(
 			0 => "",
 			1 => "",
@@ -209,7 +219,7 @@ $APPLICATION->SetTitle("");
 		"SHOW_SLIDER" => "N",
 		"TEMPLATE_THEME" => "blue",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"USE_MAIN_ELEMENT_SECTION" => "N",
+		"USE_MAIN_ELEMENT_SECTION" => "Y",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"COMPONENT_TEMPLATE" => "popular_products"
