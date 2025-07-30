@@ -1,48 +1,74 @@
-<?
-$aMenuLinks = Array(
-	Array(
-		"Новости",
-		"news/",
-		Array(),
-		Array(),
-		""
-	),
-
-	Array(
-		"Как купить",
-		"about/howto/",
-		Array(), 
-		Array(), 
-		"" 
-	),
-
-	Array(
-		"Доставка",
-		"about/delivery/",
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"О магазине",
-		"about/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Гарантия",
-		"about/guaranty/",
-		Array(),
-		Array(),
-		""
-	),
-	Array(
-		"Контакты",
-		"about/contacts/",
-		Array(),
-		Array(),
-		""
-	),
-);
+<?php
+$aMenuLinks = [
+    [
+        "Sell online",
+        "/sell-online/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Features",
+        "/features/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Shopping cart",
+        "/shopping-cart/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Store builder",
+        "/store-builder/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Mobile commerce",
+        "/mobile-commerce/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Dropshipping",
+        "/dropshipping/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Website development",
+        "/website-development/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Point of sale",
+        "/point-of-sale/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Hardware",
+        "/hardware/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Software",
+        "/software/",
+        [],
+        [],
+        ""
+    ]
+];
 ?>
