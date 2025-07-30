@@ -10,6 +10,7 @@
                 <img src="<?=$item['PREVIEW_PICTURE']['SRC']?>" alt="<?=$item['NAME']?>" class="img-fluid">
                 </a>
                 <h2 class="item-title"><a href="<?=$item["DETAIL_PAGE_URL"]?>"><?=$item['NAME']?></a></h2>
+<!--                --><?php //=$item["DETAIL_PAGE_URL"]?>
                 <strong class="item-price">
                     <?php $formatedPrice = number_format($item['ITEM_PRICES'][0]['PRICE'], 2, '.', '');?>
                     <?php if ($item['PROPERTIES']['SALE']):?>
